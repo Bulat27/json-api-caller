@@ -1,13 +1,21 @@
 package rs.ac.bg.fon.np.json_api_caller.domen;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Film {
 
+	@SerializedName("Title")
 	private String naslov;
+	@SerializedName("Year")
 	private int godinaIzlaska;
+	@SerializedName("Runtime")
 	private String trajanje;
+	@SerializedName("Genre")
 	private String zanr;
+	@SerializedName("Director")
 	private String imeRezisera;
-	private int imdbRejting;
+	@SerializedName("imdbRating")
+	private double imdbRejting;
 
 	public String getNaslov() {
 		return naslov;
@@ -49,11 +57,11 @@ public class Film {
 		this.imeRezisera = imeRezisera;
 	}
 
-	public int getImdbRejting() {
+	public double getImdbRejting() {
 		return imdbRejting;
 	}
 
-	public void setImdbRejting(int imdbRejting) {
+	public void setImdbRejting(double imdbRejting) {
 		this.imdbRejting = imdbRejting;
 	}
 
